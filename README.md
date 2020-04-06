@@ -8,4 +8,6 @@ https://leiningen.org/
 - set chmod +x lein
 
 ### on project
-`lein run`
+ - `lein run`
+ - `lein uberjar` - build jar
+ - `lein repl` - interactive shell
