@@ -18,3 +18,23 @@
     ([a b & more] (println "more than two args"))
     
 - destructuring
+
+- assoc
+(assoc {:a 1 :b 2} :c 3)
+
+- repeat / repeatedly fn()
+(take 8 (repeat "na"))
+
+- recur
+loop [x 1]
+    (if (> x 10)
+        (recur (inc x))
+        x)
+
+- into
+(into [] (range 10))
+
+- conj
+(conj [1 2 3] 4)
+
+- partial

@@ -22,7 +22,7 @@ https://github.com/donut-party/system
 
 # validation
 https://github.com/plumatic/schema
-
+https://github.com/metosin/malli
 
 ## configuration
 https://github.com/juxt/aero
