@@ -1,0 +1,716 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:50133 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clj-crash-course.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉clj-crash-course.core꞉> 
+; Jack-in done.
+clj꞉clj-crash-course.core꞉> 
+
+(testb)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:52:1).
+; Unable to resolve symbol: testb in this context
+clj꞉clj-crash-course.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:50139 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clj-crash-course.core꞉> 
+; Jack-in done.
+clj꞉clj-crash-course.core꞉> 
+
+
+(test)
+; Syntax error compiling at (test/clj_crash_course/core_test.clj:0:0).
+; Unable to resolve symbol: testb in this context
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/testb2
+clj꞉clj-crash-course.core-test꞉> 
+
+(testb2)
+nil
+clj꞉clj-crash-course.core-test꞉> 
+
+(hello)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:86:1).
+; Unable to resolve symbol: hello in this context
+clj꞉clj-crash-course.core-test꞉> 
+
+(hello [])
+; Syntax error compiling at (.calva/output-window/output.calva-repl:91:1).
+; Unable to resolve symbol: hello in this context
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+
+
+(hello)
+"Hello, World!"
+clj꞉clj-crash-course.core꞉> 
+
+
+(hello [])
+; Execution error (ArityException) at clj-crash-course.core/eval11462 (REPL:108).
+; Wrong number of args (1) passed to: clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+
+
+(hello)
+"Hello, World!"
+clj꞉clj-crash-course.core꞉> 
+
+
+(hello)
+"Hello, World!"
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+(hello)
+; Execution error (ArityException) at clj-crash-course.core/eval11483 (REPL:125).
+; Wrong number of args (0) passed to: clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/testb2
+clj꞉clj-crash-course.core-test꞉> 
+
+
+(testb2)
+nil
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: sample.clj
+nil
+clj꞉clj-crash-course.sample꞉> 
+; Evaluating file: sample.clj
+nil
+clj꞉clj-crash-course.sample꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.common.core/add
+clj꞉clj-crash-course.common.core꞉> 
+
+add(1, 2)
+; Execution error (ClassCastException) at clj-crash-course.common.core/eval11567 (REPL:147).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clj-crash-course.common.core꞉> 
+(add 1 2)
+3
+clj꞉clj-crash-course.common.core꞉> 
+ (add 3 5
+      )
+
+8
+clj꞉clj-crash-course.common.core꞉> 
+; Evaluating file: core.clj
+; 
+; ; clj  clj-crash-course.core 
+; Syntax error macroexpanding clojure.core/ns at (src/clj_crash_course/core.clj:1:1).
+; require - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+; require - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+; require - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+; require - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+; require - failed: #{:refer} at: [:ns-clauses :refer :clause] spec: :clojure.core.specs.alpha/ns-refer
+; require - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+; require - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core.clj
+; 
+; Syntax error macroexpanding clojure.core/ns at (src/clj_crash_course/core.clj:1:1).
+; require - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+; require - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+; require - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+; require - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+; require - failed: #{:refer} at: [:ns-clauses :refer :clause] spec: :clojure.core.specs.alpha/ns-refer
+; require - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+; require - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/hello
+clj꞉clj-crash-course.core꞉> 
+[]
+clj꞉clj-crash-course.core꞉> 
+
+
+(hello)
+; Hello, World! 3
+nil
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal
+clj꞉clj-crash-course.core-test꞉> 
+; Running test: cal…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; Running all project tests…
+; Evaluating file: core_test.clj
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+
+(cal); Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:50304 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:50306 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clj-crash-course.core꞉> 
+; Jack-in done.
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ; FAIL in clj-crash-course.core-test/cal-test (core_test.clj:24):
+; ; expected:
+; 809
+; 
+; ; actual:
+; 807
+
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 1, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/cal
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core꞉> 
+; Running test: a-test…
+; 1 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core꞉> 
+; Running test: a-test…
+; 1 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/cal
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; ERROR in clj-crash-course.core-test/testb (core_test.clj:11):
+; Uncaught exception, not in assertion
+; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (core_test.clj:11)
+; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 4
+clj꞉clj-crash-course.core-test꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless)
+; Using host:port 127.0.0.1:50324 ...
+; Hooking up nREP    L sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clj-crash-course.core꞉> 
+; Jack-in done.
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clj-crash-course.core꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core.clj
+#'clj-crash-course.core/cal
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/cal-test
+clj꞉clj-crash-course.core-test꞉> 
+; Running all project tests…
+; 2 tests finished, all passing 👍, ns: 1, vars: 2
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/sub
+clj꞉clj-crash-course.core-test꞉> 
+(sub [3 2
+      
+      ])
+
+; Execution error (ArityException) at clj-crash-course.core-test/eval11486 (REPL:389).
+; Wrong number of args (1) passed to: clj-crash-course.core-test/sub
+(sub)clj꞉clj-crash-course.core-test꞉> 
+
+; Syntax error compiling at (.calva/output-window/output.calva-repl:0:0).
+; Unable to resolve symbol:   in this context
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/sub
+clj꞉clj-crash-course.core-test꞉> 
+(sub 3 1
+     )
+
+; Execution error (ClassCastException) at clj-crash-course.core-test/sub (core_test.clj:14).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/sub
+clj꞉clj-crash-course.core-test꞉> 
+(sub 5 2)
+3
+clj꞉clj-crash-course.core-test꞉> 
+(sub 9 1)
+8
+clj꞉clj-crash-course.core-test꞉> 
+
+; Evaluating file: core_test.clj
+#'clj-crash-course.core-test/divide
+clj꞉clj-crash-course.core-test꞉> 
+(divide 10 2)
+5
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: core_test.clj
+; 12
+nil
+clj꞉clj-crash-course.core-test꞉> 
+
+(get [4 2] 5)
+         (let [x 4])
+      y 3
+      z 3]
+  (println z))
+; 3
+nil
+clj꞉clj-crash-course.core-test꞉> 
+(type [2 5 3])
+clojure.lang.PersistentVector
+clj꞉clj-crash-course.core-test꞉> 
+
+
+(get [4 2] 5)
+nil
+clj꞉clj-crash-course.core-test꞉> 
+(get [4 2] 0
+#{2 3 2 4})
+
+
+     
+4
+clj꞉clj-crash-course.core-test꞉> 
+
+
+#{2 3 2 4}
+; Syntax error reading source at (REPL:455:11).
+; Duplicate key: 2
+clj꞉clj-crash-course.core-test꞉> 
+
+
+(set [1 2 1 2])
+
+
+
+#{1 2}
+clj꞉clj-crash-course.core-test꞉> 
+; Evaluating file: func.clj
+(135 135 2357)
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+[1 1 1]
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+()
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+(123 123 2345)
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+(2345)
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+(123 123 2345)
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+(123 123 2345)
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+2591
+clj꞉clj-crash-course.common.func꞉> 
+; Syntax error compiling at (src/clj_crash_course/common/func.clj:0:0).
+; Can't take value of a macro: #'clojure.core/fn
+clj꞉clj-crash-course.common.func꞉> 
+2591
+clj꞉clj-crash-course.common.func꞉> 
+2591
+clj꞉clj-crash-course.common.func꞉> 
+2591
+clj꞉clj-crash-course.common.func꞉> 
+(123 123 2345)
+clj꞉clj-crash-course.common.func꞉> 
+; Execution error (ArityException) at clj-crash-course.common.func/eval12113 (REPL:25).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉clj-crash-course.common.func꞉> 
+2591
+clj꞉clj-crash-course.common.func꞉> 
+; Execution error (ArityException) at clj-crash-course.common.func/eval12117$fn (REPL:28).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉clj-crash-course.common.func꞉> 
+; Execution error (ArityException) at clj-crash-course.common.func/eval12121$fn (REPL:28).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉clj-crash-course.common.func꞉> 
+[146 146 2368]
+clj꞉clj-crash-course.common.func꞉> 
+; [246]
+; [246 246]
+; [246 246 4690]
+[246 246 4690]
+clj꞉clj-crash-course.common.func꞉> 
+{false [123 123 2345]}
+clj꞉clj-crash-course.common.func꞉> 
+{false [123 123 2345]}
+clj꞉clj-crash-course.common.func꞉> 
+{true [123 123 2345]}
+clj꞉clj-crash-course.common.func꞉> 
+[123 123 2345]
+clj꞉clj-crash-course.common.func꞉> 
+[123 123 2345]
+clj꞉clj-crash-course.common.func꞉> 
+[123 123 2345]
+clj꞉clj-crash-course.common.func꞉> 
+[123 123 2345]
+clj꞉clj-crash-course.common.func꞉> 
+{true [123 123 2345]}
+clj꞉clj-crash-course.common.func꞉> 
+{true [123 123 2345]}
+clj꞉clj-crash-course.common.func꞉> 
+
+
+
+(group-by odd? v)
+{true [123 123 2345]}
+clj꞉clj-crash-course.common.func꞉> 
+
+3
+clj꞉clj-crash-course.common.func꞉> 
+; Evaluating file: func.clj
+; [246]
+; [246 246]
+; [246 246 468]
+; [246 246 468 10]
+; [246 246 468 10 4]
+; [246 246 468 10 4 6868]
+; [246 246 468 10 4 6868 4690]
+; [246 246 468 10 4 6868 4690 690712]
+; [246 246 468 10 4 6868 4690 690712 91268]
+; [246 246 468 10 4 6868 4690 690712 91268 46]
+10
+clj꞉clj-crash-course.common.func꞉> 
+{true [123 123 5 2345 23], false [234 2 3434 345356 45634]}
+clj꞉clj-crash-course.common.func꞉> 
+{true [123 123 5 2345 23], false [234 2 3434 345356 45634]}
+clj꞉clj-crash-course.common.func꞉> 
+10
+clj꞉clj-crash-course.common.func꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///Users/oshanwisumperuma/panda/braveclojure/clj-crash-course/.nrepl-port ...
+; Using host:port localhost:50324 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clj-crash-course.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉clj-crash-course.core꞉> 
+; Syntax error compiling at (src/clj_crash_course/java.clj:3:1).
+; No such namespace: Interger
+clj꞉clj-crash-course.java꞉> 
+12
+clj꞉clj-crash-course.java꞉> 
+"12"
+clj꞉clj-crash-course.java꞉> 
+#'clj-crash-course.java/v
+clj꞉clj-crash-course.java꞉> 
+#'clj-crash-course.java/v
+clj꞉clj-crash-course.java꞉> 
+12
+clj꞉clj-crash-course.java꞉> 
+; 12
+nil
+clj꞉clj-crash-course.java꞉> 
+; Evaluating file: concurrency.clj
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; Syntax error compiling at (src/clj_crash_course/concurrency.clj:6:5).
+; No such namespace: Thead
+clj꞉clj-crash-course.concurrency꞉> 
+; Evaluating file: concurrency.clj
+; 
+; Syntax error compiling at (src/clj_crash_course/concurrency.clj:6:5).
+; No such namespace: Thead
+; Evaluation of file concurrency.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clj-crash-course.concurrency꞉> 
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; world
+nil
+clj꞉clj-crash-course.concurrency꞉> 
+; hello
+; Evaluating file: concurrency.clj
+; 
+; Execution error (FileNotFoundException) at clj-crash-course.concurrency/eval12339$loading (concurrency.clj:1).
+; Could not locate clojure/core/async__init.class, clojure/core/async.clj or clojure/core/async.cljc on classpath.
+; Evaluation of file concurrency.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉clj-crash-course.concurrency꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/oshanwisumperuma/panda/braveclojure/clj-crash-course; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.52.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless)
+; Using host:port 127.0.0.1:51546 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clj-crash-course.core꞉> 
+; Jack-in done.
+clj꞉clj-crash-course.core꞉> 
+; Evaluating file: concurrency.clj
+; world
+#object[clojure.core.async.impl.channels.ManyToManyChannel 0x190b54ca "clojure.core.async.impl.channels.ManyToManyChannel@190b54ca"]
+clj꞉clj-crash-course.concurrency꞉> 
+; value  bye from  #object[clojure.core.async.impl.channels.ManyToManyChannel 0x28e9ad6 clojure.core.async.impl.channels.ManyToManyChannel@28e9ad6]
+; value  hi from  #object[clojure.core.async.impl.channels.ManyToManyChannel 0x36bd8a98 clojure.core.async.impl.channels.ManyToManyChannel@36bd8a98]
+; hello
+; Syntax error compiling at (src/clj_crash_course/concurrency.clj:30:1).
+; Unable to resolve symbol: a in this context
+clj꞉clj-crash-course.concurrency꞉> 
+; Evaluating file: concurrency.clj
+; world
+3
+clj꞉clj-crash-course.concurrency꞉> 
+; value  hi from  #object[clojure.core.async.impl.channels.ManyToManyChannel 0x735ac63e clojure.core.async.impl.channels.ManyToManyChannel@735ac63e]
+; value  bye from  #object[clojure.core.async.impl.channels.ManyToManyChannel 0x76401267 clojure.core.async.impl.channels.ManyToManyChannel@76401267]
+; hello
+4
+clj꞉clj-crash-course.concurrency꞉> 
+5
+clj꞉clj-crash-course.concurrency꞉> 
+6
+clj꞉clj-crash-course.concurrency꞉> 
+7
+clj꞉clj-crash-course.concurrency꞉> 
+8
+clj꞉clj-crash-course.concurrency꞉> 
+
+monitor-exit
+; Syntax error compiling at (.calva/output-window/output.calva-repl:0:0).
+; Unable to resolve symbol: monitor-exit in this context
+clj꞉clj-crash-course.concurrency꞉> 
+(monitor-exit
+ 
+ )
+
+
+; Execution error (NullPointerException) at clj-crash-course.concurrency/eval11666 (REPL:708).
+; Cannot exit synchronized block because "null" is null
+clj꞉clj-crash-course.concurrency꞉> 
+; nREPL Connection was closed
