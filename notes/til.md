@@ -38,3 +38,18 @@ loop [x 1]
 (conj [1 2 3] 4)
 
 - partial
+
+
+
+# polymorphism
+
+- records
+(defrecord Person [name age])
+( Person. "John" 30)
+ (.name (Person. "John" 30))
+(:name (Person. "John" 30))
+
+
+
+
+
